@@ -1,0 +1,16 @@
+{% extends "master/base.html" %}
+
+
+{% block content %}
+<div class="card" style="width: 18rem;">
+  <img src="{{request.user.user_profile.profile_image.url}}"  class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Full Name = {{request.user.full_name}}</h5>
+    <p class="card-text">Address={{request.user.user_profile.address}}</p>
+    <p class="card-text">Contact ={{request.user.user_profile.contact}}</p>
+    <p class="card-text">Date Of Birth ={{request.user.user_profile.dob}}</p>
+    <a href="{% url "update_profile" %}" class="btn btn-primary">Update Profile</a>
+  </div>
+</div>
+
+{% endblock content %}
