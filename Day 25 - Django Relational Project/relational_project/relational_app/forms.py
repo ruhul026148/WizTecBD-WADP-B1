@@ -19,7 +19,4 @@ class ProductForm(forms.ModelForm):
         model=ProductModel
         fields='__all__'
         exclude=['total_amount','created_by']
-        
-        widgets={
-            
-        }
+    

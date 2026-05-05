@@ -3,7 +3,8 @@ from relational_app.views import (sign_up,
                                   login_page,sign_out,
                                   home_page,profile_page,
                                   update_profile,
-                                  product_list)
+                                  product_list,
+                                  add_product,update_product)
 
 
 urlpatterns = [
@@ -17,7 +18,12 @@ urlpatterns = [
     # User profile
     path('profile-page/',profile_page,name='profile_page'),
     path('update-profile/',update_profile,name='update_profile'),
+    #Product
+    
     path('product-list/',product_list,name='product_list'),
+    path('add-product/',add_product,name='add_product'),
+     
+    path('update-product/<int:id>/',update_product,name='update_product'),
      
 ]
 
