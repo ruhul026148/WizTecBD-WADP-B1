@@ -1,0 +1,14 @@
+{% extends "master/base.html" %}
+
+ {% block content %}
+    
+ {% if messages %}
+ {% for i in messages %}
+ <div class="alert alert-success" role="alert">
+  {{i}}
+</div>
+ 
+ {% endfor %}
+ {% endif %}
+
+    {% endblock content %}

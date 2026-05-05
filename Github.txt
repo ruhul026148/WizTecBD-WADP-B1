@@ -1,0 +1,46 @@
+First A repository create kore nite hobe jdi new hy
+
+folder--- GitHub then cmd
+
+git clone https://github.com/ruhul026148/WizTecBD-WADP-B1.git
+
+cd repository_name
+
+
+google search - git local config
+
+View current local settings:
+git config --list --local
+
+
+Set a local username:
+git config user.name "Md. Ruhul Amin"
+
+Set a local email address:
+git config user.email "ruhularif026148@gmail.com"
+
+View current local settings:
+git config --list --local
+
+
+open vs code 
+
+create .gitignore file
+
+enter this file 
+env/
+
+
+pip list
+
+or pip freeze     view all package
+
+pip freeze > requirments.txt
+
+
+git add .
+
+git commit -m "Day 25 Django Relationship"
+
+git push origin main
+

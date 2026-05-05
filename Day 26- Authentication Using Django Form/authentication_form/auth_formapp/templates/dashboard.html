@@ -1,0 +1,6 @@
+{% extends "master/base.html" %}
+
+ {% block content %}
+    {% include "master/messages.html" %}
+ <p>User = {{request.user.username}}</p>
+{% endblock content %}
