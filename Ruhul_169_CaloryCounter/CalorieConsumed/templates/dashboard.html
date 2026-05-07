@@ -1,0 +1,43 @@
+{% extends 'master/base.html' %}
+
+{% block content %}
+
+<p>UserName = {{request.user.username}}</p>
+
+
+
+<div class="container">
+
+    <h1>Daily Consume Calories</h1>
+
+<div class="row">
+
+<div class="card col-md-4">
+  <div class="card-header">
+    Consumed Calories
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">O kcal</h5>
+  </div>
+</div>
+<div class="card col-md-4">
+  <div class="card-header">
+    Required Calories
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">{{required_calorie}} kcal</h5>
+  </div>
+</div>
+<div class="card col-md-4">
+  <div class="card-header">
+    Less/More Calories
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">O kcal</h5>
+  </div>
+</div>
+</div>
+
+</div>
+
+{% endblock content %}

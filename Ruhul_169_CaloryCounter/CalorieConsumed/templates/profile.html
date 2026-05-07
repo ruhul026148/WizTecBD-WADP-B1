@@ -1,0 +1,9 @@
+{% extends 'master/base.html' %}
+
+
+ {% block content %}
+ {% include 'master/message.html' %}
+  <p>Name = {{request.user.auth_user.name}}</p>
+  <p>BMR = {{request.user.auth_user.bmr}}</p>
+<a href="{% url 'update_profile' %}" class="btn btn-primary" tabindex="-1" role="button" >Update Profile</a>
+ {% endblock content %}
