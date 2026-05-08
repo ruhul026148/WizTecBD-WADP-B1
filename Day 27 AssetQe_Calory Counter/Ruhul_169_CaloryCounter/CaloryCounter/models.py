@@ -33,5 +33,5 @@ class CalorieModel(models.Model):
     consumed_by=models.ForeignKey(User,on_delete=models.CASCADE,related_name='user_calorie',null=True)
     
     def __str__(self):
-        return f'{self.item_name}-{self.consumed_by.usernsme}'
+        return f'{self.item_name}-{self.consumed_by.username}'
     

@@ -1,0 +1,37 @@
+{% extends "master/base.html" %}
+
+{% block content %}
+{% include "master/messages.html" %}
+<a href="{% url "add_calorie" %}" class="btn btn-primary "  >Add Calorie</a>
+<h1>User Calorie Consumed List</h1>
+<table class="table table-striped-columns">
+  <thead>
+    <tr>
+      <th scope="col">SI No</th>
+      <th scope="col">Item Name</th>
+      <th scope="col">Calorie Consumed</th>
+      <th scope="col">Day</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for data in user_data %}
+    <tr>
+      <th scope="row">{{forloop.counter}}</th>
+      <td>{{data.item_name}}</td>
+      <td>{{data.Calorie_consumed}}</td>
+      <td>{{data.created_at}}</td>
+      <td><a href="{% url "Update_calorie" data.id %}" >Edit</a>
+        <a href="{% url "delete_calorie" data.id %}" >Delete</a>
+    </td>
+    </tr>
+    {% endfor %}
+
+  </tbody>
+</table>
+
+
+
+
+    
+{% endblock content %}

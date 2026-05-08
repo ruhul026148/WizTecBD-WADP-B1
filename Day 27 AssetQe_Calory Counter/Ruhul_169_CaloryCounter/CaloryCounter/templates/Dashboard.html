@@ -5,6 +5,56 @@
 <div class="container">
     {% include "master/messages.html" %}
     <p>Username = {{request.user.username}}</p>
+ <div class="row"> 
+<div class="card col-md-4" >
+  <h5 class="card-header">Daliy Calorie Consume</h5>
+  <div class="card-body">
+    <h5 class="card-title">{{Consume_calorie}} kcl</h5>
+  </div>
+</div>
+<div class="card col-md-4" >
+  <h5 class="card-header">Requird Calorie Consume</h5>
+  <div class="card-body">
+    <h5 class="card-title">{{requeid_calorie}} kcl</h5>
+  </div>
+</div>
+
+<div class="card col-md-4" >
+  <h5 class="card-header">Less/More Calorie</h5>
+  <div class="card-body">
+    <h5 class="card-title">{{less_more}} kcl</h5>
+  </div>
+</div>
+</div>  
+<br>
+<div class="alert alert-warning" role="alert">
+  {{suggestion}}
+</div>
+<br>
+<h1>Today Calorie Consumed : {{total_count}}</h1>
+
+
+<table class="table table-striped-columns">
+  <thead>
+    <tr>
+      <th scope="col">SI No</th>
+      <th scope="col">Item Name</th>
+      <th scope="col">Calorie Consumed</th>
+      <th scope="col">Day</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for data in today_consumed_data %}
+    <tr>
+      <th scope="row">{{forloop.counter}}</th>
+      <td>{{data.item_name}}</td>
+      <td>{{data.Calorie_consumed}}</td>
+      <td>{{data.created_at}}</td>
+    </tr>
+    {% endfor %}
+</tbody>
+</table>
+
 </div>
     
 {% endblock content %}
