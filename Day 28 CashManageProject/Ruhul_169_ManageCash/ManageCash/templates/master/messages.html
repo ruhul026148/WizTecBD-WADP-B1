@@ -1,0 +1,15 @@
+
+{% block content %}
+<div class="container">
+{% if messages %}
+{% for i in messages %}
+
+<div class="alert alert-success" role="alert">
+  {{i}}
+</div>
+
+
+{% endfor %}
+{% endif %}
+</div>
+{% endblock content %}
